@@ -6,6 +6,7 @@ from main_app.models import Feedback
 
 
 def homepage(request: HttpRequest) -> HttpResponse:
+    print(request.POST)
     if request.method == "POST":
         name = request.POST["name"]
         phone_number = request.POST["phone_number"]
