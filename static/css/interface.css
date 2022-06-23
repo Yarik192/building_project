@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #272727;
+    overflow-x: hidden;
+}
+
+/* Scroll */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #656565;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #929292;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+/* Manrope */
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url('../font/Manrope-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope-ExtraBold';
+    src: url('../font/Manrope-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope-SemiBold';
+    src: url('../font/Manrope-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('../font/Manrope-Medium.ttf');
+}
+
+/* Circle */
+@font-face {
+    font-family: 'circle';
+    src: url('../font/circe.ttf');
+}
+
+@font-face {
+    font-family: 'circle-bold';
+    src: url('../font/circe-bold.ttf');
+}
+
+section{
+    background-color: #272727;
+}
+
+p{
+    font-family: 'circle';
+}
+
+h1 {
+    font-family: 'Manrope-ExtraBold';
+}
+
+h2 {
+    font-family: 'Manrope-ExtraBold';
+    color: #FAFAFA;
+    font-size: 56px;
+    line-height: 60px;
+}
+
+a {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-family: 'Manrope-Medium';
+}
+
+.line{
+    margin: 0 auto;
+    margin-bottom: 92px;
+}
+
+.map-contact{
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 0 4%;
+    }
+
+    jdiv{
+        display: none!important;
+    }
+
+    .jivo-iframe-container {
+        display: none!important;
+    }
+}

@@ -1,0 +1,251 @@
+.home {
+    height: calc(100vh + 55px);
+    background-image: url('../../img/home/background.png'), linear-gradient(blue, pink);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.about-content__images img {
+    border-radius: 5px;
+}
+
+.home-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.home-content__text h1{
+    font-size: 56px;
+    color: #FAFAFA;
+    margin-bottom: 80px;
+    margin-top: 45px;
+    line-height: 90px;
+    font-family: 'Manrope-Medium';
+}
+
+.home-content__text h1 span{
+    font-size: 90px;
+    font-family: 'Manrope-ExtraBold'
+}
+
+.home-content__text-stat{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-content__text-stat div:nth-child(1){
+    max-width: 164px;
+}
+
+.home-content__text-stat div:nth-child(2){
+    max-width: 128px;
+}
+
+.home-content__text-stat div:nth-child(3){
+    max-width: 140px;
+}
+
+.home-content__text-stat div p:first-child {
+    font-size: 56px;
+    color: #C6A57C;
+    font-family: 'Manrope-Bold';
+}
+
+.home-content__text-stat div p:last-child{
+    font-size: 16px;
+    color: #FAFAFA;
+    font-family: 'circle';
+}
+
+.home-social{
+    position: absolute;
+    bottom: 17%;
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+}
+
+.home-social p {
+    font-family: 'circle';
+    color: #FAFAFA;
+    margin-bottom: 10px;
+}
+
+.home-social a {
+    height: inherit;
+}
+
+.home-social a:nth-child(2){
+    margin: 0 30px;
+}
+
+.home-social svg path{
+    transition: 0.2s;
+}
+
+.home-social svg:hover path{
+    fill: #c6a57c;
+    transition: 0.2s;
+}
+
+.home-content__button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-content__button a:first-child{
+    margin-bottom: 24px;
+}
+
+.home-content__button a img:first-child{
+    position: absolute;
+    left: 19px;
+}
+
+.home-content__button a p{
+    position: absolute;
+    left: 56px;
+    font-size: 18px;
+    opacity: 0;
+    line-height: initial;
+}
+
+.home-content__button a{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius:100px;
+    transition: 0.5s;
+    position: relative;
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.home-content__button a:first-child:hover{
+    width: 195px;
+    transition: 0.5s;
+}
+
+.home-content__button a:hover{
+    width: 208px;
+    transition: 0.5s;
+}
+
+.home-content__button a:hover p{
+    opacity: 1;
+    transition: 0.1s;
+}
+
+.home-content__button p{
+    position: absolute;
+    width: max-content;
+}
+
+.home-content__button.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .home-social {
+        display: none;
+    }
+
+    .home-content__button{
+        display: none;
+    }
+
+    .home-content__button.mobile{
+        display: flex;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-content__button {
+        position: absolute;
+        bottom: 85px;
+        right: 2%;
+    }
+
+    .home-content__button {
+        flex-direction: row;
+    }
+
+    .home-content__button a:first-child{
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .background-img {
+        object-position: left;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .home-content__text h1 {
+        font-size: 32px;
+        margin-bottom: 44px;
+        line-height: 46px;
+        margin-top: 125px;
+    }
+
+    .home {
+        height: clac(100vh + 85px);
+    }
+
+    .home-content__text h1 span{
+        font-size: 56px;
+    }
+
+    .home-content__text-stat{
+        flex-direction: column;
+    }
+
+    .home{
+        background-position: left center;
+    }
+
+    .home-content__button a{
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+    }
+
+    .home-content__button a img:first-child {
+        left: inherit;
+    }
+
+    .home-content__button a:hover{
+        width: 52px;
+        height: 52px;
+    }
+
+    .home-content__button a:first-child:hover {
+        width: 52px;
+        height: 52px;
+    }
+
+    .home-content__text-stat div p:first-child{
+        font-size: 40px;
+    }
+
+    .home .container {
+        height: auto;
+    }
+}

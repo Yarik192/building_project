@@ -1,0 +1,108 @@
+{% extends './homepage.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="map">
+        <div class="map-controls active">
+            <div class="map-controls__navigation">
+                <div class="button-aside active">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="map-controls__content active">
+                <p class="breadcrumbs">
+                    <a href="index.html">ГЛАВНАЯ </a>/
+                </p>
+
+                <h2>
+                    Как добраться
+
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_103_951)">
+                            <path d="M8.57869e-05 1.4995C-0.000306163 1.26585 0.0694437 1.03941 0.197227 0.859501C0.269184 0.758243 0.357557 0.674541 0.457283 0.613189C0.55701 0.551837 0.666129 0.51404 0.778395 0.501965C0.89066 0.489889 1.00387 0.503771 1.11153 0.542815C1.21919 0.58186 1.31919 0.645299 1.4058 0.729501L6.00009 5.2095L10.6029 0.889502C10.6906 0.806436 10.7915 0.744404 10.8998 0.706973C11.0081 0.669541 11.1216 0.657447 11.234 0.671386C11.3463 0.685326 11.4551 0.725022 11.5542 0.788196C11.6533 0.85137 11.7408 0.936775 11.8115 1.0395C11.8895 1.14297 11.9484 1.26413 11.9844 1.3954C12.0204 1.52666 12.0327 1.66518 12.0207 1.80228C12.0086 1.93937 11.9724 2.07207 11.9142 2.19205C11.8561 2.31204 11.7774 2.41671 11.6829 2.4995L6.54009 7.3295C6.38671 7.47658 6.19434 7.55699 5.9958 7.55699C5.79726 7.55699 5.60488 7.47658 5.45151 7.3295L0.308658 2.3295C0.204928 2.22918 0.12293 2.10175 0.0693168 1.95754C0.0157041 1.81333 -0.00801473 1.65641 8.57869e-05 1.4995Z"
+                                  fill="#C6A57C"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_103_951">
+                                <rect width="7" height="12" fill="white" transform="translate(12 0.5) rotate(90)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </h2>
+
+                <div class="map-info">
+                    <p class="map-info__title">Москва, Гостиничный пр.,<br> д. 4Б, 3 этаж</p>
+
+                    <div class="map-info__contact">
+                        <div>
+                            <p>Телефон центрального офиса:</p>
+                            <p>+ 7 905 194-33-33</p>
+                        </div>
+                        <div>
+                            <p>Электронная почта:</p>
+                            <p>Pochta.sfg@mail.ru</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setTransport">
+                    <div class="public-transport active" data-router="masstransit">
+                        <p>Общ. транспорт</p>
+                    </div>
+
+                    <div class="auto" data-router="auto">
+                        <p>Автомобиль</p>
+                    </div>
+                </div>
+
+                <input class="point-start" type="text" placeholder="Откуда вы поедете">
+
+                <input class="point-end" type="text" value="Гостиничный пр., д. 4Б" readonly>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal-menu">
+        <nav>
+            <ul>
+                <li>
+                    <a class="modal-menu__button">
+                        <p>О компании</p>
+                        <img src="./img/about/arrow-menu.svg" alt="arrow-menu">
+                    </a>
+                    <div class="modal-menu_list">
+                        <a href="line-busines.html"><span class="dot"></span> Направления деятельности</a>
+                        <a href="license.html"><span class="dot"></span> Лицензии и сертификаты</a>
+                        <a href="bosses.html"><span class="dot"></span> Руководство SFG</a>
+                        <a href="work.html"><span class="dot"></span> Работа у нас</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">Проекты</a>
+                </li>
+                <li>
+                    <a href="index.html">Ключевые заказчики</a>
+                </li>
+                <li>
+                    <a href="index.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="index.html">Принцип работы</a>
+                </li>
+                <li>
+                    <a href="index.html">Ценообразование</a>
+                </li>
+                <li>
+                    <a href="index.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1a66766-818f-4fa5-91eb-76386123faec&lang=ru_RU"
+            type="text/javascript"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+{% endblock %}

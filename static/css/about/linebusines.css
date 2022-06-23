@@ -1,0 +1,26 @@
+.lineBusines {
+    margin-top: 77px;
+    padding-top: 44px;
+    margin-bottom: 77px;
+}
+
+.lineBusines h2 {
+    color: #FAFAFA;
+    font-size: 28px;
+    margin-bottom: 44px;
+    line-height: 38px;
+}
+
+.lineBusines p {
+    color: #FAFAFA;
+    font-size: 16px;
+    margin-bottom: 44px;
+}
+
+.lineBusines img {
+    border-radius: 5px;
+}
+
+.img-first{
+    margin-bottom: 20px;
+}

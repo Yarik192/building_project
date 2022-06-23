@@ -1,0 +1,45 @@
+{% extends "main_app/homepage.html" %}
+
+{% block content %}
+    <section class="project">
+        <div class="container">
+            <div class="project-inprogress">
+                <h2 class="project-inprogress__title">Проекты в разработке</h2>
+                <div class="project-inprogress__items">
+                {% for project in object_list %}
+                    {% if not project.completed %}
+                        <div class="project-inprogress__item">
+                            <div class="project-inprogress__item-img">
+                                <img src="../../../media/{{ project.image }}" alt="project image">
+                            </div>
+                            <div class="project-inprogress__item-description">
+                                <p>{{ project.name }}</p>
+                                <p>{{ project.description }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+
+            <div class="project-ready">
+                <h2 class="project-ready__title">Готовые проекты</h2>
+                <div class="project-ready__items">
+                    {% for project in object_list %}
+                        {% if project.completed %}
+                            <div class="project-ready__item">
+                                <div class="project-ready__item-img">
+                                    <img src="../../../media/{{ project.image }}" alt="project image">
+                                </div>
+                                <div class="project-ready__item-description">
+                                    <p>{{ project.name }}</p>
+                                    <p>{{ project.description }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

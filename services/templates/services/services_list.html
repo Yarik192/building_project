@@ -1,0 +1,50 @@
+{% extends "main_app/homepage.html" %}
+
+{% block content %}
+    <section class="service-detail">
+        <div class="container" style="position: inherit">
+            <h2>Услуги</h2>
+            <div class="service-detail_items">
+                {% for service in object_list %}
+                <div class="service-detail_item">
+                    <div class="service-detail_item-img">
+                        <img src="../../../media/{{ service.image }}" alt="">
+                    </div>
+                    <div class="service-detail_item-description">
+                        <p>{{ service.name }}</p>
+                        <p>{{ service.description }}</p>
+                        <button class="btn-fileClaim" data-claim="{{ service.pk }}">Подать заявку</button>
+                    </div>
+                </div>
+                    <div class="modal-service">
+                        <div class="modal-service_content">
+                            <div class="close-modal-service">
+                                 
+                            </div>
+                            <p class="modal-service_content-title">Заявка на услугу: {{ service.name }}</p>
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="text" name="{{ form.name.name }}" placeholder="Имя">
+                                <input type="text" name="{{ form.phone_number.name }}" placeholder="Телефон">
+                                <textarea 40 type="text" name="{{ form.description.name }}" placeholder="Опишите ваши требования"></textarea>
+                                <input type="hidden" value="{{ service.pk }}" name="service_pk">
+                                <button type="submit" class="btn-order-service" data-claim="{{ service.pk }}">Заказать услугу</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{#    {% for service in object_list %}#}
+{#        <h1>{{ service.name }}</h1>#}
+{#        <h1>{{ service.description }}</h1>#}
+{#        <img src="../../../media/{{ service.image }}">#}
+{#        <form method="post">#}
+{#            {% csrf_token %}#}
+{#            {{ form.as_p }}#}
+{#            <input type="hidden" value="{{ service.pk }}" name="service_pk">#}
+{#            <button type="submit">Заказать услугу</button>#}
+{#        </form>#}
+{#    {% endfor %}#}
+{% endblock %}

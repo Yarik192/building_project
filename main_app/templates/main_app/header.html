@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Шапка -->
+
+<!-- Логотип шапки -->
+<div class="container">
+    <a href="/" class="header-logo">
+        <img src="{% static 'img/logo2.png' %}" alt="logo" width="400px">
+        <!-- <p>SFG</p> -->
+    </a>
+
+    <!-- Навигация шапки -->
+    <div class="header-nav">
+        <nav class="header-nav__content">
+            <ul>
+                <li>
+                    <a href="#about">О компании</a>
+
+                </li>
+                <li>
+                    <a href="#services">Услуги</a>
+                </li>
+                <li>
+                    <a href="#contact">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-nav__info">
+            <img src="{% static 'img/home/call.svg' %}" alt="call">
+            <div class="header-nav__info-contact">
+                <a href="#">+ 7 905 194-33-33</a>
+                <a href="#">Pochta.sfg@mail.ru</a>
+            </div>
+
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>

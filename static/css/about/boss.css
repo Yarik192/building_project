@@ -1,0 +1,38 @@
+@media screen and (max-width: 991px){
+    .boss {
+        margin-top: 77px;
+        padding-top: 44px;
+        margin-bottom: 77px;
+    }
+
+    .boss h2 {
+        color: #FAFAFA;
+        font-size: 28px;
+        margin-bottom: 44px;
+    }
+
+    .boss-item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .boss-item img{
+        width: 88px;
+        height: 88px;
+        margin-right: 16px;
+    }
+
+    .boss-item__text p:first-child{
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-family: 'circle-bold';
+        color: #FAFAFA;
+    }
+
+    .boss-item__text p:last-child{
+        font-size: 16px;
+        font-family: 'circle';
+        color: #FAFAFA;
+    }
+}

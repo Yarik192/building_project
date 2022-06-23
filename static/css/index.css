@@ -1,0 +1,27 @@
+@import './reset.css';
+@import './interface.css';
+@import './header.css';
+@import './footer.css';
+
+/* Home */
+@import './home/index.css';
+/* About */
+@import './about/index.css';
+@import './about/linebusines.css';
+@import './about/license.css';
+@import './about/boss.css';
+@import './about/work.css';
+/* Customers */
+@import './customers/index.css';
+/* Services */
+@import './services/index.css';
+/* Princeples */
+@import './principles/index.css';
+/* Pricing */
+@import './pricing/index.css';
+/* Contact */
+@import './contact/index.css';
+/* Map */
+@import './map/index.css';
+/* Project */
+@import './project/index.css';

@@ -1,0 +1,826 @@
+{% extends './homepage.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Первая секция -->
+    <section class="home">
+        <div class="home-content__button mobile">
+            <a href="map.html">
+                <img src="{% static 'img/home/geoposition.svg' %}" alt="">
+                <p>Как добраться</p>
+            </a>
+            <a href="#contact">
+                <img src="{% static 'img/home/mail.svg' %}" alt="">
+                <p>Оставить заявку</p>
+            </a>
+        </div>
+        <div class="container">
+            <div class="home-content">
+                <div class="home-content__button">
+                    <a href="map.html">
+                        <img src="{% static 'img/home/geoposition.svg' %}" alt="">
+                        <p>Как добраться</p>
+                    </a>
+                    <a href="#contact">
+                        <img src="{% static 'img/home/mail.svg' %}" alt="">
+                        <p>Оставить заявку</p>
+                    </a>
+                </div>
+                <div class="home-content__text">
+                    <h1>Строительно-<br>экспертный центр<br> <span>«SFG»</span></h1>
+
+                    <div class="home-content__text-stat">
+                        <div>
+                            <p id="oneCount">0</p>
+                            <p>обследованных зданий и сооружений</p>
+                        </div>
+                        <div>
+                            <p id="twoCount">0</p>
+                            <p>объектов стр. лаб. инжинирингового контроля</p>
+                        </div>
+                        <div>
+                            <p id="threeCount">0</p>
+                            <p>лет накопленного опыта</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-social">
+                <p>Мы в соцсетях:</p>
+                <div>
+                    <a href="#">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3928 6.48639C11.8654 6.5274 11.2092 6.63873 10.9572 6.72076C10.6057 6.84381 10.2131 7.1192 10.0725 7.34185C9.91425 7.60553 9.93183 7.65826 10.1838 7.70514C10.4709 7.75787 11.01 8.00396 11.1799 8.16217C11.3967 8.36139 11.5842 8.78326 11.6955 9.32232C11.8303 9.97271 11.8478 12.6622 11.7248 13.418C11.4787 14.9356 10.8869 15.2286 9.98457 14.2852C8.98847 13.2481 7.44746 10.6348 6.49824 8.37896C6.19941 7.67584 6.00019 7.44146 5.57246 7.29498C5.31464 7.21295 4.99824 7.20123 2.94746 7.21881C0.398628 7.23639 0.304878 7.2481 0.0822216 7.58209C-0.122857 7.89849 0.0763623 8.41998 1.45332 11.1622C3.37519 15.0118 5.25605 17.9356 7.07246 19.9044C8.883 21.879 11.2561 23.127 13.7697 23.4376C14.092 23.4786 14.8361 23.4962 15.5275 23.4844C16.635 23.4669 16.7463 23.4551 16.9748 23.338C17.3732 23.1212 17.467 22.9395 17.5256 22.2188C17.59 21.4337 17.6252 21.2051 17.7365 20.8008C18.0353 19.7403 18.592 19.3419 19.2951 19.6934C19.4475 19.7696 19.8459 20.1387 20.3322 20.6426C22.0256 22.4122 22.5705 22.9278 23.0041 23.1563C23.7541 23.5547 23.8303 23.5606 26.3967 23.5196C28.8518 23.4844 29.1857 23.4493 29.6018 23.1739C30.2932 22.7169 30.0822 22.002 28.8049 20.3907C28.6115 20.1504 27.7502 19.254 26.8889 18.3985C25.7228 17.2501 25.2834 16.7754 25.2014 16.5821C24.9084 15.9258 25.0666 15.6036 26.7775 13.3594C28.3947 11.2383 29.0686 10.2481 29.5666 9.25201C30.0939 8.19732 30.1174 7.62896 29.6311 7.36529L29.385 7.23639L26.426 7.25982C23.2209 7.2774 23.2736 7.27154 23.0334 7.60553C22.9689 7.69928 22.7873 8.08599 22.6291 8.47271C21.51 11.168 19.7287 13.9805 18.7561 14.6016C18.2756 14.9004 17.9416 14.7833 17.6896 14.2266L17.549 13.9161V10.7813V7.64654L17.3908 7.32428C17.2971 7.14264 17.1506 6.94928 17.0393 6.8731C16.799 6.70904 16.301 6.58014 15.6154 6.50396C15.135 6.45123 12.9611 6.43951 12.3928 6.48639Z"
+                                  fill="#FAFAFA" fill-opacity="0.3"/>
+                        </svg>
+                    </a>
+
+                    <a href="#">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.45001 4.72423C9.40581 4.73628 9.22501 4.77245 9.04822 4.80459C7.15983 5.16218 5.52858 6.60057 4.89778 8.45682C4.61251 9.29655 4.62858 8.89477 4.62858 14.9858C4.62858 20.1287 4.6326 20.4903 4.7009 20.8117C5.17501 23.0336 6.84644 24.705 9.06831 25.1791C9.38974 25.2474 9.75135 25.2515 14.8942 25.2515C20.0371 25.2515 20.3987 25.2474 20.7201 25.1791C22.942 24.705 24.6134 23.0336 25.0875 20.8117C25.1558 20.4903 25.1598 20.1287 25.1598 14.9858C25.1598 9.84298 25.1558 9.48137 25.0875 9.15995C24.6697 7.19521 23.2875 5.62021 21.4232 4.98941C20.5835 4.70414 21.0536 4.72423 14.9947 4.7162C11.9893 4.71218 9.49421 4.7162 9.45001 4.72423ZM21.1339 7.47245C21.7969 7.67736 22.2871 8.3403 22.2871 9.03539C22.2871 9.65012 21.9094 10.2247 21.3308 10.4979C21.1179 10.5983 20.9973 10.6265 20.7482 10.6385C20.25 10.6626 19.8763 10.526 19.5228 10.1885C19.0286 9.71843 18.888 8.96709 19.1813 8.34834C19.5388 7.59298 20.3464 7.23137 21.1339 7.47245ZM15.7902 9.46129C16.3567 9.56173 16.8107 9.71039 17.325 9.9595C17.9558 10.2689 18.4138 10.6024 18.9 11.1006C20.3183 12.5631 20.8246 14.6082 20.254 16.5849C20.1255 17.0309 19.8201 17.6738 19.5268 18.1158C19.2335 18.5617 18.5987 19.2086 18.1567 19.526C17.9638 19.6626 17.5902 19.8796 17.325 20.0122C16.5214 20.4019 15.7942 20.5707 14.8942 20.5707C13.9942 20.5707 13.267 20.4019 12.4634 20.0122C11.8326 19.7028 11.3746 19.3693 10.8884 18.8711C9.4701 17.4086 8.96787 15.3716 9.53439 13.3867C9.66697 12.9247 10.0447 12.1613 10.354 11.7233C10.6714 11.2814 11.3183 10.6466 11.7643 10.3532C12.4272 9.9153 13.1906 9.60593 13.9701 9.4653C14.392 9.38896 15.3563 9.38896 15.7902 9.46129Z"
+                                  fill="#FAFAFA" fill-opacity="0.3"/>
+                            <path d="M20.4549 8.59752C20.2982 8.6618 20.1978 8.83457 20.1978 9.0435C20.1978 9.20421 20.2178 9.25243 20.3223 9.35689C20.4268 9.46136 20.475 9.48145 20.6437 9.48145C20.9009 9.48145 21.0777 9.3368 21.1098 9.09573C21.158 8.72207 20.8085 8.45287 20.4549 8.59752Z"
+                                  fill="#FAFAFA" fill-opacity="0.3"/>
+                            <path d="M14.167 10.6027C12.4272 10.9241 11.0772 12.1496 10.6071 13.8451C10.5027 14.2148 10.4946 14.2991 10.4946 14.9862C10.4946 15.6732 10.5027 15.7576 10.6071 16.1273C11.037 17.6782 12.2022 18.8433 13.7531 19.2732C14.1228 19.3777 14.2071 19.3857 14.8942 19.3857C15.5812 19.3857 15.6656 19.3777 16.0353 19.2732C17.5861 18.8433 18.7513 17.6782 19.1812 16.1273C19.2857 15.7576 19.2937 15.6732 19.2937 14.9862C19.2937 14.2991 19.2857 14.2148 19.1812 13.8451C18.7513 12.3023 17.5861 11.129 16.0553 10.7032C15.7339 10.6148 15.5772 10.5987 15.0147 10.5866C14.6491 10.5786 14.2674 10.5866 14.167 10.6027Z"
+                                  fill="#FAFAFA" fill-opacity="0.3"/>
+                        </svg>
+                    </a>
+
+                    <a href="#">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29094 4.33712C3.52141 4.41916 2.75969 4.54806 1.91008 5.41525C0.650313 6.69845 0.11125 9.03634 0.0233597 13.6477C-0.0410934 16.8703 0.163985 19.5246 0.591719 21.1477C0.972578 22.5656 1.63469 23.6848 2.38469 24.1535C3.38664 24.7805 4.76945 24.8625 15.0585 24.8567C25.2948 24.8567 26.6132 24.7863 27.5976 24.1652C28.5644 23.5559 29.2909 22.091 29.6425 20.0285C29.8945 18.5578 29.9648 17.4035 29.9648 14.6145C29.9648 12.0129 29.9296 11.216 29.7362 9.78048C29.4433 7.63009 28.9159 6.23556 28.0546 5.38009C27.4511 4.77072 26.7948 4.55978 25.1952 4.44845C22.9628 4.29611 13.9862 4.23751 8.29094 4.33712ZM16.1308 11.8899C18.5683 13.3547 20.5663 14.5676 20.5663 14.5852C20.5663 14.6086 15.0468 17.9426 11.4784 20.0813L11.2499 20.216V14.5852V8.95431L11.4784 9.08908C11.6015 9.16525 13.6933 10.425 16.1308 11.8899Z"
+                                  fill="#FAFAFA" fill-opacity="0.3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-content__left">
+                    <h2 data-aos="fade-up">О компании</h2>
+
+                    <ul id="listState">
+                        <li class="active" data-action="business" data-aos="fade-up">Направления деятельности</li>
+                        <li data-aos="fade-up" data-action="license">Лицензии и сертификаты</li>
+                        <li data-aos="fade-up" data-action="warden">Руководство SFG</li>
+                        <li data-aos="fade-up" data-action="vacancies">Работа у нас</li>
+                    </ul>
+                </div>
+
+                <div class="about-content__right" data-aos="fade-up">
+                    <div class="about-content__right-element active" id="lineBusiness">
+                        <p>
+                            Строительно-экспертный центр «SFG» является многопрофильной организацией, которая работает в
+                            сфере жилищно-коммунального и строительного комплекса.
+                            В своей деятельности мы руководствуемся нормами гражданского и процессуального
+                            законодательства, а также законодательства о саморегулировании в строительной отрасли.
+                            Основным направлением деятельности является предоставление услуг в области строительства и
+                            экспертизы.
+                            Компания имеет все необходимые допуски для работы в данном направлении.
+                        </p>
+                        <a href="#">
+                            Перейти к «О компании»
+                            <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow">
+                        </a>
+                    </div>
+
+                    <div class="about-content__right-element" id="license">
+                        <div class="licenses">
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SVG групп Сертификат ISO 9001 пр. 03.10.2019</p>
+                            </div>
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SFG групп Лицензия Минкультуры SVG групп 25.04.2017 ...</p>
+                            </div>
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SVG групп Сертификат ИСМ стр. SVG групп 20.03.2018 комсомольский</p>
+                            </div>
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SVG групп Сертификат ISO 9001 пр. 03.10.2019</p>
+                            </div>
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SFG групп Лицензия Минкультуры SVG групп 25.04.2017 ...</p>
+                            </div>
+                            <div class="license-item">
+                                <div class="license-item__img">
+                                    <img src="{% static 'img/about/license.png' %}" alt="license">
+                                    <button>Увеличить</button>
+                                </div>
+                                <p>SVG групп Сертификат ИСМ стр. SVG групп 20.03.2018 комсомольский</p>
+                            </div>
+                        </div>
+                        <a href="#">
+                            Все лицензии и сертификаты
+                            <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow">
+                        </a>
+                    </div>
+
+                    <div class="about-content__right-element" id="warden">
+                        <div class="warden-element">
+                            <img src="{% static 'img/about/wander.png' %}" alt="warden">
+                            <p>Мамедов Эльнур Русланович</p>
+                            <p>Генеральный директор</p>
+                        </div>
+                        <div class="warden-element">
+                            <img src="{% static 'img/about/wander.png' %}" alt="warden">
+                            <p>Езоян Саркис Айказович</p>
+                            <p>Коммерческий директор</p>
+                        </div>
+                        <div class="warden-element">
+                            <img src="{% static 'img/about/wander.png' %}" alt="warden">
+                            <p>Монахов Алексей Юрьевич</p>
+                            <p>Руководитель звена инженеров - экспертов</p>
+                        </div>
+                        <div class="warden-element">
+                            <img src="{% static 'img/about/wander.png' %}" alt="warden">
+                            <p>Мамедов Эльнур Русланович</p>
+                            <p>Генеральный директор</p>
+                        </div>
+                    </div>
+
+                    <div class="about-content__right-element" id="vacancies">
+                        <div class="vacancie-item">
+                            <div class="vacancie-item__info">
+                                <p class="vacancie-item__info-title">Пресс-секретарь</p>
+                                <div class="vacancie-item__info-company">
+                                    <p>ООО Сафи-Груп</p>
+                                    <span></span>
+                                    <p>Москва</p>
+                                </div>
+                                <p class="vacancie-item__info-text">
+                                    Требуемый опыт работы: не требуется.
+                                    Полная занятость, гибкий график.
+                                    Возможна подработка: сменами по 4-6 часов или по вечерам.
+                                </p>
+                            </div>
+                            <span class="vacancie-line"></span>
+                            <div class="vacancie-item__price">
+                                <p>от <span>40 000</span> руб.<br> до <span>55 000</span> руб.</p>
+
+                                <button>Подробнее</button>
+                            </div>
+                        </div>
+
+                        <div class="vacancie-item">
+                            <div class="vacancie-item__info">
+                                <p class="vacancie-item__info-title">Младший инженер строительной лаборатории</p>
+                                <div class="vacancie-item__info-company">
+                                    <p>ООО Сафи-Груп</p>
+                                    <span></span>
+                                    <p>Москва</p>
+                                </div>
+                                <p class="vacancie-item__info-text">
+                                    Требуемый опыт работы: 1–3 года.
+                                    Полная занятость, полный день.
+                                </p>
+                            </div>
+                            <span class="vacancie-line"></span>
+                            <div class="vacancie-item__price">
+                                <p>от <span>45 000</span> руб.<br> до <span>57 000</span> руб.</p>
+
+                                <button>Подробнее</button>
+                            </div>
+                        </div>
+
+                        <div class="vacancie-item">
+                            <div class="vacancie-item__info">
+                                <p class="vacancie-item__info-title">Секретарь-делопроизводитель</p>
+                                <div class="vacancie-item__info-company">
+                                    <p>ООО Сафи-Груп</p>
+                                    <span></span>
+                                    <p>Москва</p>
+                                </div>
+                                <p class="vacancie-item__info-text">
+                                    Требуемый опыт работы: не требуется.
+                                    Полная занятость, полный день.
+                                </p>
+                            </div>
+                            <span class="vacancie-line"></span>
+                            <div class="vacancie-item__price">
+                                <p>от <span>40 000</span> руб.<br> до <span>55 000</span> руб.</p>
+
+                                <button>Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content__images active">
+                <img src="{% static 'img/about/about-one.png' %}" alt="about-one" data-aos="fade-up">
+                <img src="{% static 'img/about/about-two.png' %}" alt="about-two" data-aos="fade-up">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ключевые заказчики -->
+    <section class="customers">
+        <div class="container">
+            <div class="customers-content">
+                <div class="customers-content__customer">
+                    <h2 data-aos="fade-up">Ключевые заказчики</h2>
+
+                    <div class="customers-elements" data-aos="fade-up">
+                        <div>
+                            <img src="{% static 'img/customers/logo-cushman.svg' %}" alt="cushman">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-lotte.svg' %}" alt="lotte">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-ant.svg' %}" alt="ant">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-fsk.svg' %}" alt="fsk">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-esta.svg' %}" alt="esta">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-rt.svg' %}" alt="RT">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-epoha.svg' %}" alt="epoha">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-cliver.svg' %}" alt="cliver">
+                        </div>
+                        <div>
+                            <img src="{% static 'img/customers/logo-major.svg' %}" alt="major">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customers-content__project" data-aos="fade-up">
+                    <h2>Проекты</h2>
+
+                    <div class="project-elements">
+                        <p>— Обследование ряда объектов МИА «Россия Сегодня» (девелоперские проекты);</p>
+                        <p>— Обследование инженерных систем отелей Lotte;</p>
+                        <p>— Анализ степени аварийности объектов ряда муниципалитетов Тверской, Владимирской,
+                            Калининградской областей, а также Краснодарского края;</p>
+                        <p>— Инструментально-расчётный контроль несущей способности объектов транспортной инфраструктуры
+                            Москвы и Московской области (близ Аэропорта Шереметьево, участки ЦКАД, пешеходные переходы и
+                            МЦК);</p>
+                        <p>— Иные объекты (по запросу).</p>
+                    </div>
+
+                    <a href="/projects">
+                        Перейти к «Проекты»
+                        <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-content">
+                <div class="services-content__text">
+                    <h2 data-aos="fade-up">Услуги</h2>
+
+                    <div class="services-elements">
+                        <div data-aos="fade-up">
+                            <img src="{% static 'img/services/key.svg' %}" alt="key">
+                            <p>Обследование зданий и сооружений «под ключ» с целью дальнейшего редевелопмента</p>
+                        </div>
+
+                        <div data-aos="fade-up">
+                            <img src="{% static 'img/services/home.svg' %}" alt="home">
+                            <p>Анализ состояния аварийного или ограниченно работоспособного строения с целью дальнейшего
+                                ремонта или сноса </p>
+                        </div>
+
+                        <div data-aos="fade-up">
+                            <img src="{% static 'img/services/documents.svg' %}" alt="documents">
+                            <p>Экспертиза проектной и сметной документации</p>
+                        </div>
+
+                        <div data-aos="fade-up">
+                            <img src="{% static 'img/services/troub.svg' %}" alt="troub">
+                            <p>Дефектоскопия и экспертиза работоспособности инженерных систем (механических и
+                                автоматических)</p>
+                        </div>
+                    </div>
+
+                    <a href="./services.html">Перейти к "Услугам" <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow"></a>
+                </div>
+            </div>
+        </div>
+        <div class="services-content__img">
+            <img src="{% static 'img/services/SFG.svg' %}" alt="SFG">
+        </div>
+    </section>
+
+    <section class="principles">
+        <div class="container">
+            <div class="principles-content">
+                <h2 data-aos="fade-up">Принцип работы</h2>
+
+                <div class="principles-content__element">
+                    <div data-aos="fade-up" data-aos-duration="500">
+                        <img src="{% static 'img/principles/doc.svg' %}" alt="">
+                        <p class="principles-title">1 этап</p>
+                        <p class="principles-text">Направление технического задания или заявки</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="700">
+                        <img src="{% static 'img/principles/call.svg' %}" alt="">
+                        <p class="principles-title">2 этап</p>
+                        <p class="principles-text">Проведение телефонных переговоров и выезд коммерческого директора на
+                            объект совместно с экспертом</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="900">
+                        <img src="{% static 'img/principles/car.svg' %}" alt="">
+                        <p class="principles-title">3 этап</p>
+                        <p class="principles-text">Выезды на объект эксперта и инженеров с целью проведения необходимых
+                            мероприятий (обмеры, испытания конструкций, дефектоскопия и др.)</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1100">
+                        <img src="{% static 'img/principles/docs.svg' %}" alt="">
+                        <p class="principles-title">4 этап</p>
+                        <p class="principles-text">Подготовка технико-экспертного документа с расчётами и визуализацией
+                            (в нескольких томах)</p>
+                    </div>
+                </div>
+
+                <div class="principles-slider">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div>
+                                    <img src="{% static 'img/principles/doc.svg' %}" alt="">
+                                    <p class="principles-title">1 этап</p>
+                                    <p class="principles-text">Направление технического задания или заявки</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <img src="{% static 'img/principles/doc.svg' %}" alt="">
+                                    <p class="principles-title">2 этап</p>
+                                    <p class="principles-text">Проведение телефонных переговоров и выезд коммерческого
+                                        директора на объект совместно с экспертом</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <img src="{% static 'img/principles/doc.svg' %}" alt="">
+                                    <p class="principles-title">3 этап</p>
+                                    <p class="principles-text">Выезды на объект эксперта и инженеров с целью проведения
+                                        необходимых мероприятий (обмеры, испытания конструкций, дефектоскопия и др.)</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <img src="{% static 'img/principles/doc.svg' %}" alt="">
+                                    <p class="principles-title">4 этап</p>
+                                    <p class="principles-text">Подготовка технико-экспертного документа с расчётами и
+                                        визуализацией (в нескольких томах)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev">
+                                <svg width="24" height="18" viewBox="0 0 24 18" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.34834 9.93165L1.34953 9.9329L8.26685 16.7768C8.78507 17.2895 9.62325 17.2876 10.1391 16.7723C10.6549 16.2571 10.6529 15.4238 10.1347 14.911L5.49036 10.3162L21.4995 10.3162C22.2307 10.3162 23.04 9.72693 23.04 9.00003C23.04 8.27314 22.2307 7.6839 21.4995 7.6839L5.49043 7.6839L10.1346 3.08903C10.6528 2.57627 10.6548 1.74296 10.139 1.22776C9.62319 0.712428 8.78493 0.710652 8.26678 1.22329L1.34946 8.06716L1.34827 8.06841C0.829789 8.58288 0.831443 9.41889 1.34834 9.93165Z"
+                                          fill="#FAFAFA"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="24" height="18" viewBox="0 0 24 18" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6517 8.06834L22.6505 8.06709L15.7332 1.22322C15.2149 0.71052 14.3767 0.712428 13.8609 1.22769C13.3451 1.74289 13.3471 2.5762 13.8653 3.08896L18.5096 7.68384L2.50049 7.68384C1.76934 7.68384 0.959961 8.27307 0.959961 8.99997C0.959961 9.72686 1.76934 10.3161 2.50049 10.3161L18.5096 10.3161L13.8654 14.911C13.3472 15.4237 13.3452 16.257 13.861 16.7722C14.3768 17.2876 15.2151 17.2893 15.7332 16.7767L22.6505 9.93284L22.6517 9.93159C23.1702 9.41711 23.1686 8.58111 22.6517 8.06834Z"
+                                          fill="#C6A57C"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img src="{% static 'img/line.svg' %}" alt="line" class="line">
+
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-content">
+                <h2 data-aos="fade-up">Ценообразование на 2022 год</h2>
+
+                <table class="pricing-table" data-aos="fade-up">
+                    <tr class="pricing-table__title">
+                        <th style="border-top-left-radius: 5px;">
+                            <p>Тип, количественный состав строений</p>
+                        </th>
+                        <th>
+                            <p>Примерная стоимость</p>
+                        </th>
+                        <th style="border-top-right-radius: 5px;">
+                            <p>Примерный срок выполнения обследования<br>(включая камеральную обработку)</p>
+                        </th>
+                    </tr>
+                    <tr class="pricing-table__text">
+                        <td>
+                            <p>Строение до 99 м2 включительно</p>
+                        </td>
+                        <td>
+                            <p>50 000 – 125 000 руб.</p>
+                        </td>
+                        <td>
+                            <p>10-12 календарных дней</p>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table__text">
+                        <td>
+                            <p>Строение от 100 до 200 м2 включительно</p>
+                        </td>
+                        <td>
+                            <p>95 000 – 190 000 руб.</p>
+                        </td>
+                        <td>
+                            <p>10-20 календарных дней</p>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table__text">
+                        <td>
+                            <p>Строение от 201 до 500 м2 включительно</p>
+                        </td>
+                        <td>
+                            <p>155 000 – 450 000 руб.</p>
+                        </td>
+                        <td>
+                            <p>15-25 календарных дней</p>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table__text">
+                        <td>
+                            <p>Строение от 501 до 1500 м2 включительно</p>
+                        </td>
+                        <td>
+                            <p>от 250 000 руб.</p>
+                        </td>
+                        <td>
+                            <p>от 20 календарных дней</p>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table__text">
+                        <td style="border-bottom-left-radius: 5px;">
+                            <p>Группа строений / жилой комплекс / другое</p>
+                        </td>
+                        <td>
+                            <p>от 400 000 руб.</p>
+                        </td>
+                        <td style="border-bottom-right-radius: 5px;">
+                            <p>от 30 календарных дней</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="pricing-listener">
+                    <div class="pricing-listener__title">
+                        <p>Тип, количественный состав строений</p>
+                    </div>
+                    <div class="pricing-listener__sub">
+                        <div class="pricing-listener__sub-title">
+                            <p>Строение до 99 м2 включительно</p>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_62_459)">
+                                    <path d="M8.57869e-05 1.49956C-0.000306163 1.26591 0.0694437 1.03947 0.197227 0.859562C0.269184 0.758304 0.357557 0.674602 0.457283 0.61325C0.55701 0.551898 0.666129 0.514102 0.778395 0.502026C0.89066 0.48995 1.00387 0.503832 1.11153 0.542876C1.21919 0.581921 1.31919 0.64536 1.4058 0.729562L6.00009 5.20956L10.6029 0.889563C10.6906 0.806497 10.7915 0.744465 10.8998 0.707034C11.0081 0.669602 11.1216 0.657508 11.234 0.671447C11.3463 0.685387 11.4551 0.725083 11.5542 0.788257C11.6533 0.851431 11.7408 0.936836 11.8115 1.03956C11.8895 1.14303 11.9484 1.26419 11.9844 1.39546C12.0204 1.52672 12.0327 1.66524 12.0207 1.80234C12.0086 1.93943 11.9724 2.07213 11.9142 2.19211C11.8561 2.3121 11.7774 2.41677 11.6829 2.49956L6.54009 7.32956C6.38671 7.47665 6.19434 7.55705 5.9958 7.55705C5.79726 7.55705 5.60488 7.47665 5.45151 7.32956L0.308658 2.32956C0.204928 2.22925 0.12293 2.10181 0.0693168 1.9576C0.0157041 1.81339 -0.00801473 1.65647 8.57869e-05 1.49956Z"
+                                          fill="#C6A57C"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_62_459">
+                                        <rect width="7" height="12" fill="white"
+                                              transform="translate(12 0.5) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="pricing-listener__sub-content">
+                            <div class="pricing">
+                                <p>Примерная стоимость:</p>
+                                <p>50 000 – 125 000 руб.</p>
+                            </div>
+
+                            <div class="time">
+                                <p>Примерный срок выполнения обследования (включая камеральную обработку):</p>
+                                <p>10-12 календарных дней</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-listener__sub">
+                        <div class="pricing-listener__sub-title">
+                            <p>Строение от 100 до 200 м2 включительно</p>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_62_459)">
+                                    <path d="M8.57869e-05 1.49956C-0.000306163 1.26591 0.0694437 1.03947 0.197227 0.859562C0.269184 0.758304 0.357557 0.674602 0.457283 0.61325C0.55701 0.551898 0.666129 0.514102 0.778395 0.502026C0.89066 0.48995 1.00387 0.503832 1.11153 0.542876C1.21919 0.581921 1.31919 0.64536 1.4058 0.729562L6.00009 5.20956L10.6029 0.889563C10.6906 0.806497 10.7915 0.744465 10.8998 0.707034C11.0081 0.669602 11.1216 0.657508 11.234 0.671447C11.3463 0.685387 11.4551 0.725083 11.5542 0.788257C11.6533 0.851431 11.7408 0.936836 11.8115 1.03956C11.8895 1.14303 11.9484 1.26419 11.9844 1.39546C12.0204 1.52672 12.0327 1.66524 12.0207 1.80234C12.0086 1.93943 11.9724 2.07213 11.9142 2.19211C11.8561 2.3121 11.7774 2.41677 11.6829 2.49956L6.54009 7.32956C6.38671 7.47665 6.19434 7.55705 5.9958 7.55705C5.79726 7.55705 5.60488 7.47665 5.45151 7.32956L0.308658 2.32956C0.204928 2.22925 0.12293 2.10181 0.0693168 1.9576C0.0157041 1.81339 -0.00801473 1.65647 8.57869e-05 1.49956Z"
+                                          fill="#C6A57C"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_62_459">
+                                        <rect width="7" height="12" fill="white"
+                                              transform="translate(12 0.5) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="pricing-listener__sub-content">
+                            <div class="pricing">
+                                <p>Примерная стоимость:</p>
+                                <p>95 000 – 190 000 руб.</p>
+                            </div>
+
+                            <div class="time">
+                                <p>Примерный срок выполнения обследования (включая камеральную обработку):</p>
+                                <p>10-20 календарных дней</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-listener__sub">
+                        <div class="pricing-listener__sub-title">
+                            <p>Строение от 201 до 500 м2 включительно</p>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_62_459)">
+                                    <path d="M8.57869e-05 1.49956C-0.000306163 1.26591 0.0694437 1.03947 0.197227 0.859562C0.269184 0.758304 0.357557 0.674602 0.457283 0.61325C0.55701 0.551898 0.666129 0.514102 0.778395 0.502026C0.89066 0.48995 1.00387 0.503832 1.11153 0.542876C1.21919 0.581921 1.31919 0.64536 1.4058 0.729562L6.00009 5.20956L10.6029 0.889563C10.6906 0.806497 10.7915 0.744465 10.8998 0.707034C11.0081 0.669602 11.1216 0.657508 11.234 0.671447C11.3463 0.685387 11.4551 0.725083 11.5542 0.788257C11.6533 0.851431 11.7408 0.936836 11.8115 1.03956C11.8895 1.14303 11.9484 1.26419 11.9844 1.39546C12.0204 1.52672 12.0327 1.66524 12.0207 1.80234C12.0086 1.93943 11.9724 2.07213 11.9142 2.19211C11.8561 2.3121 11.7774 2.41677 11.6829 2.49956L6.54009 7.32956C6.38671 7.47665 6.19434 7.55705 5.9958 7.55705C5.79726 7.55705 5.60488 7.47665 5.45151 7.32956L0.308658 2.32956C0.204928 2.22925 0.12293 2.10181 0.0693168 1.9576C0.0157041 1.81339 -0.00801473 1.65647 8.57869e-05 1.49956Z"
+                                          fill="#C6A57C"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_62_459">
+                                        <rect width="7" height="12" fill="white"
+                                              transform="translate(12 0.5) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="pricing-listener__sub-content">
+                            <div class="pricing">
+                                <p>Примерная стоимость:</p>
+                                <p>155 000 – 450 000 руб.</p>
+                            </div>
+
+                            <div class="time">
+                                <p>Примерный срок выполнения обследования (включая камеральную обработку):</p>
+                                <p>15-25 календарных дней</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-listener__sub">
+                        <div class="pricing-listener__sub-title">
+                            <p>Строение от 501 до 1500 м2 включительно</p>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_62_459)">
+                                    <path d="M8.57869e-05 1.49956C-0.000306163 1.26591 0.0694437 1.03947 0.197227 0.859562C0.269184 0.758304 0.357557 0.674602 0.457283 0.61325C0.55701 0.551898 0.666129 0.514102 0.778395 0.502026C0.89066 0.48995 1.00387 0.503832 1.11153 0.542876C1.21919 0.581921 1.31919 0.64536 1.4058 0.729562L6.00009 5.20956L10.6029 0.889563C10.6906 0.806497 10.7915 0.744465 10.8998 0.707034C11.0081 0.669602 11.1216 0.657508 11.234 0.671447C11.3463 0.685387 11.4551 0.725083 11.5542 0.788257C11.6533 0.851431 11.7408 0.936836 11.8115 1.03956C11.8895 1.14303 11.9484 1.26419 11.9844 1.39546C12.0204 1.52672 12.0327 1.66524 12.0207 1.80234C12.0086 1.93943 11.9724 2.07213 11.9142 2.19211C11.8561 2.3121 11.7774 2.41677 11.6829 2.49956L6.54009 7.32956C6.38671 7.47665 6.19434 7.55705 5.9958 7.55705C5.79726 7.55705 5.60488 7.47665 5.45151 7.32956L0.308658 2.32956C0.204928 2.22925 0.12293 2.10181 0.0693168 1.9576C0.0157041 1.81339 -0.00801473 1.65647 8.57869e-05 1.49956Z"
+                                          fill="#C6A57C"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_62_459">
+                                        <rect width="7" height="12" fill="white"
+                                              transform="translate(12 0.5) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="pricing-listener__sub-content">
+                            <div class="pricing">
+                                <p>Примерная стоимость:</p>
+                                <p>от 250 000 руб.</p>
+                            </div>
+
+                            <div class="time">
+                                <p>Примерный срок выполнения обследования (включая камеральную обработку):</p>
+                                <p>от 20 календарных дней</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-listener__sub" style="border-radius: 0 0 5px 5px;">
+                        <div class="pricing-listener__sub-title">
+                            <p>Группа строений / жилой комплекс / другое</p>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_62_459)">
+                                    <path d="M8.57869e-05 1.49956C-0.000306163 1.26591 0.0694437 1.03947 0.197227 0.859562C0.269184 0.758304 0.357557 0.674602 0.457283 0.61325C0.55701 0.551898 0.666129 0.514102 0.778395 0.502026C0.89066 0.48995 1.00387 0.503832 1.11153 0.542876C1.21919 0.581921 1.31919 0.64536 1.4058 0.729562L6.00009 5.20956L10.6029 0.889563C10.6906 0.806497 10.7915 0.744465 10.8998 0.707034C11.0081 0.669602 11.1216 0.657508 11.234 0.671447C11.3463 0.685387 11.4551 0.725083 11.5542 0.788257C11.6533 0.851431 11.7408 0.936836 11.8115 1.03956C11.8895 1.14303 11.9484 1.26419 11.9844 1.39546C12.0204 1.52672 12.0327 1.66524 12.0207 1.80234C12.0086 1.93943 11.9724 2.07213 11.9142 2.19211C11.8561 2.3121 11.7774 2.41677 11.6829 2.49956L6.54009 7.32956C6.38671 7.47665 6.19434 7.55705 5.9958 7.55705C5.79726 7.55705 5.60488 7.47665 5.45151 7.32956L0.308658 2.32956C0.204928 2.22925 0.12293 2.10181 0.0693168 1.9576C0.0157041 1.81339 -0.00801473 1.65647 8.57869e-05 1.49956Z"
+                                          fill="#C6A57C"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_62_459">
+                                        <rect width="7" height="12" fill="white"
+                                              transform="translate(12 0.5) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="pricing-listener__sub-content">
+                            <div class="pricing">
+                                <p>Примерная стоимость:</p>
+                                <p>от 400 000 руб.</p>
+                            </div>
+
+                            <div class="time">
+                                <p>Примерный срок выполнения обследования (включая камеральную обработку):</p>
+                                <p>от 30 календарных дней</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img src="{% static 'img/line.svg' %}" alt="line" class="line" style="margin-bottom: 0;">
+
+    <section class="contact-form" id="contact">
+        <div class="container">
+            <div class="contact-content" data-aos="fade-up">
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+                    <h2>Обратная связь</h2>
+
+                    <input type="text" placeholder="Ваше Имя">
+
+                    <input type="tel" placeholder="Телефон">
+
+                    <input type="email" placeholder="Электронная почта">
+
+                    <div class="contact-form__checked">
+                        <label id="inputLine">
+                            <div class="custom-ckecbox"></div>
+                            <input type="checkbox">
+                            <span>Согласен на обработку персональных данных</span>
+                        </label>
+                    </div>
+
+                    <button type="submit">Оставить заявку</button>
+                </form>
+                <div class="contact-text">
+                    <h2>Контакты</h2>
+
+                    <div class="contact-text__info">
+                        <div class="contact-text__info-block">
+                            <div class="img-block">
+                                <img src="{% static 'img/cotact/geopointer.svg' %}" alt="geopointer">
+                            </div>
+                            <div class="info-contactBlock">
+                                <p>Адрес центрального офиса: </p>
+                                <p>г. Москва, Гостиничный пр., д. 4Б, 3 этаж </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-text__info-block">
+                            <div class="img-block">
+                                <img src="{% static 'img/cotact/call.svg' %}" alt="call">
+                            </div>
+                            <div class="info-contactBlock">
+                                <p>Телнфон центрального офиса: </p>
+                                <p>+ 7 905 194-33-33 </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-text__info-block">
+                            <div class="img-block">
+                                <img src="{% static 'img/cotact/mail.svg' %}" alt="mail">
+                            </div>
+                            <div class="info-contactBlock">
+                                <p>Электронная почта: </p>
+                                <p>Pochta.sfg@mail.ru </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-text__social">
+                        <p>Мы в соцсетях:</p>
+                        <div class="contact-text__social-items">
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.3928 6.48639C11.8654 6.5274 11.2092 6.63873 10.9572 6.72076C10.6057 6.84381 10.2131 7.1192 10.0725 7.34185C9.91425 7.60553 9.93183 7.65826 10.1838 7.70514C10.4709 7.75787 11.01 8.00396 11.1799 8.16217C11.3967 8.36139 11.5842 8.78326 11.6955 9.32232C11.8303 9.97271 11.8478 12.6622 11.7248 13.418C11.4787 14.9356 10.8869 15.2286 9.98457 14.2852C8.98847 13.2481 7.44746 10.6348 6.49824 8.37896C6.19941 7.67584 6.00019 7.44146 5.57246 7.29498C5.31464 7.21295 4.99824 7.20123 2.94746 7.21881C0.398628 7.23639 0.304878 7.2481 0.0822216 7.58209C-0.122857 7.89849 0.0763623 8.41998 1.45332 11.1622C3.37519 15.0118 5.25605 17.9356 7.07246 19.9044C8.883 21.879 11.2561 23.127 13.7697 23.4376C14.092 23.4786 14.8361 23.4962 15.5275 23.4844C16.635 23.4669 16.7463 23.4551 16.9748 23.338C17.3732 23.1212 17.467 22.9395 17.5256 22.2188C17.59 21.4337 17.6252 21.2051 17.7365 20.8008C18.0353 19.7403 18.592 19.3419 19.2951 19.6934C19.4475 19.7696 19.8459 20.1387 20.3322 20.6426C22.0256 22.4122 22.5705 22.9278 23.0041 23.1563C23.7541 23.5547 23.8303 23.5606 26.3967 23.5196C28.8518 23.4844 29.1857 23.4493 29.6018 23.1739C30.2932 22.7169 30.0822 22.002 28.8049 20.3907C28.6115 20.1504 27.7502 19.254 26.8889 18.3985C25.7228 17.2501 25.2834 16.7754 25.2014 16.5821C24.9084 15.9258 25.0666 15.6036 26.7775 13.3594C28.3947 11.2383 29.0686 10.2481 29.5666 9.25201C30.0939 8.19732 30.1174 7.62896 29.6311 7.36529L29.385 7.23639L26.426 7.25982C23.2209 7.2774 23.2736 7.27154 23.0334 7.60553C22.9689 7.69928 22.7873 8.08599 22.6291 8.47271C21.51 11.168 19.7287 13.9805 18.7561 14.6016C18.2756 14.9004 17.9416 14.7833 17.6896 14.2266L17.549 13.9161V10.7813V7.64654L17.3908 7.32428C17.2971 7.14264 17.1506 6.94928 17.0393 6.8731C16.799 6.70904 16.301 6.58014 15.6154 6.50396C15.135 6.45123 12.9611 6.43951 12.3928 6.48639Z"
+                                          fill="#FAFAFA" fill-opacity="0.3"/>
+                                </svg>
+                            </a>
+
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.45001 4.72423C9.40581 4.73628 9.22501 4.77245 9.04822 4.80459C7.15983 5.16218 5.52858 6.60057 4.89778 8.45682C4.61251 9.29655 4.62858 8.89477 4.62858 14.9858C4.62858 20.1287 4.6326 20.4903 4.7009 20.8117C5.17501 23.0336 6.84644 24.705 9.06831 25.1791C9.38974 25.2474 9.75135 25.2515 14.8942 25.2515C20.0371 25.2515 20.3987 25.2474 20.7201 25.1791C22.942 24.705 24.6134 23.0336 25.0875 20.8117C25.1558 20.4903 25.1598 20.1287 25.1598 14.9858C25.1598 9.84298 25.1558 9.48137 25.0875 9.15995C24.6697 7.19521 23.2875 5.62021 21.4232 4.98941C20.5835 4.70414 21.0536 4.72423 14.9947 4.7162C11.9893 4.71218 9.49421 4.7162 9.45001 4.72423ZM21.1339 7.47245C21.7969 7.67736 22.2871 8.3403 22.2871 9.03539C22.2871 9.65012 21.9094 10.2247 21.3308 10.4979C21.1179 10.5983 20.9973 10.6265 20.7482 10.6385C20.25 10.6626 19.8763 10.526 19.5228 10.1885C19.0286 9.71843 18.888 8.96709 19.1813 8.34834C19.5388 7.59298 20.3464 7.23137 21.1339 7.47245ZM15.7902 9.46129C16.3567 9.56173 16.8107 9.71039 17.325 9.9595C17.9558 10.2689 18.4138 10.6024 18.9 11.1006C20.3183 12.5631 20.8246 14.6082 20.254 16.5849C20.1255 17.0309 19.8201 17.6738 19.5268 18.1158C19.2335 18.5617 18.5987 19.2086 18.1567 19.526C17.9638 19.6626 17.5902 19.8796 17.325 20.0122C16.5214 20.4019 15.7942 20.5707 14.8942 20.5707C13.9942 20.5707 13.267 20.4019 12.4634 20.0122C11.8326 19.7028 11.3746 19.3693 10.8884 18.8711C9.4701 17.4086 8.96787 15.3716 9.53439 13.3867C9.66697 12.9247 10.0447 12.1613 10.354 11.7233C10.6714 11.2814 11.3183 10.6466 11.7643 10.3532C12.4272 9.9153 13.1906 9.60593 13.9701 9.4653C14.392 9.38896 15.3563 9.38896 15.7902 9.46129Z"
+                                          fill="#FAFAFA" fill-opacity="0.3"/>
+                                    <path d="M20.4549 8.59752C20.2982 8.6618 20.1978 8.83457 20.1978 9.0435C20.1978 9.20421 20.2178 9.25243 20.3223 9.35689C20.4268 9.46136 20.475 9.48145 20.6437 9.48145C20.9009 9.48145 21.0777 9.3368 21.1098 9.09573C21.158 8.72207 20.8085 8.45287 20.4549 8.59752Z"
+                                          fill="#FAFAFA" fill-opacity="0.3"/>
+                                    <path d="M14.167 10.6027C12.4272 10.9241 11.0772 12.1496 10.6071 13.8451C10.5027 14.2148 10.4946 14.2991 10.4946 14.9862C10.4946 15.6732 10.5027 15.7576 10.6071 16.1273C11.037 17.6782 12.2022 18.8433 13.7531 19.2732C14.1228 19.3777 14.2071 19.3857 14.8942 19.3857C15.5812 19.3857 15.6656 19.3777 16.0353 19.2732C17.5861 18.8433 18.7513 17.6782 19.1812 16.1273C19.2857 15.7576 19.2937 15.6732 19.2937 14.9862C19.2937 14.2991 19.2857 14.2148 19.1812 13.8451C18.7513 12.3023 17.5861 11.129 16.0553 10.7032C15.7339 10.6148 15.5772 10.5987 15.0147 10.5866C14.6491 10.5786 14.2674 10.5866 14.167 10.6027Z"
+                                          fill="#FAFAFA" fill-opacity="0.3"/>
+                                </svg>
+                            </a>
+
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.29094 4.33712C3.52141 4.41916 2.75969 4.54806 1.91008 5.41525C0.650313 6.69845 0.11125 9.03634 0.0233597 13.6477C-0.0410934 16.8703 0.163985 19.5246 0.591719 21.1477C0.972578 22.5656 1.63469 23.6848 2.38469 24.1535C3.38664 24.7805 4.76945 24.8625 15.0585 24.8567C25.2948 24.8567 26.6132 24.7863 27.5976 24.1652C28.5644 23.5559 29.2909 22.091 29.6425 20.0285C29.8945 18.5578 29.9648 17.4035 29.9648 14.6145C29.9648 12.0129 29.9296 11.216 29.7362 9.78048C29.4433 7.63009 28.9159 6.23556 28.0546 5.38009C27.4511 4.77072 26.7948 4.55978 25.1952 4.44845C22.9628 4.29611 13.9862 4.23751 8.29094 4.33712ZM16.1308 11.8899C18.5683 13.3547 20.5663 14.5676 20.5663 14.5852C20.5663 14.6086 15.0468 17.9426 11.4784 20.0813L11.2499 20.216V14.5852V8.95431L11.4784 9.08908C11.6015 9.16525 13.6933 10.425 16.1308 11.8899Z"
+                                          fill="#FAFAFA" fill-opacity="0.3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <iframe class="map-contact"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A909ad315443d9f8c979da2d0345fa88eb9c23598111ae64f9fa964b94a45bc5b&amp;source=constructor"
+                width="1140" height="560" frameborder="0"></iframe>
+        <a class="link-map" href="map.html">
+            Как добраться
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_198_599)">
+                    <path d="M35.5875 17.0046C35.5871 17.0042 35.5868 17.0037 35.5863 17.0032L28.2383 9.69075C27.6879 9.14294 26.7975 9.14498 26.2496 9.69553C25.7017 10.246 25.7038 11.1364 26.2543 11.6842L31.1877 16.5937H1.40625C0.629578 16.5937 0 17.2233 0 18C0 18.7767 0.629578 19.4062 1.40625 19.4062H31.1876L26.2543 24.3157C25.7039 24.8636 25.7018 25.754 26.2496 26.3044C26.7976 26.8551 27.688 26.857 28.2384 26.3092L35.5864 18.9967C35.5868 18.9963 35.5871 18.9958 35.5876 18.9954C36.1384 18.4457 36.1366 17.5524 35.5875 17.0046Z"
+                          fill="#FAFAFA"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_198_599">
+                        <rect width="36" height="36" rx="5" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+    </section>
+    {#    <h1>Хуй знает</h1>#}
+    {#    <br>#}
+    {#    <h1>CONTENT</h1>#}
+    {#    <br><br><br><br><br><br><br><br><br><br>#}
+    {##}
+    {#    <h1>Связь с нами</h1>#}
+    {#    <form method="post">#}
+    {#        {% csrf_token %}#}
+    {##}
+    {#        <input type="text" placeholder="Имя">#}
+    {#        <input type="tel" placeholder="Номер телефона">#}
+    {#        <input type="email" placeholder="Почта">#}
+    {##}
+    {#        <button type="submit">Отправить</button>#}
+    {#    </form>#}
+{% endblock %}
