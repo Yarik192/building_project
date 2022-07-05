@@ -349,7 +349,7 @@
                         </div>
                     </div>
 
-                    <a href="./services.html">Перейти к "Услугам" <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow"></a>
+                    <a href="{% url "services" %}">Перейти к "Услугам" <img src="{% static 'img/about/Arrow.svg' %}" alt="arrow"></a>
                 </div>
             </div>
         </div>
@@ -701,11 +701,11 @@
                     {% csrf_token %}
                     <h2>Обратная связь</h2>
 
-                    <input type="text" placeholder="Ваше Имя">
+                    <input type="text" placeholder="Ваше Имя" name="name">
 
-                    <input type="tel" placeholder="Телефон">
+                    <input type="tel" placeholder="Телефон" name="phone_number">
 
-                    <input type="email" placeholder="Электронная почта">
+                    <input type="email" placeholder="Электронная почта" name="email">
 
                     <div class="contact-form__checked">
                         <label id="inputLine">

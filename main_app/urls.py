@@ -1,9 +1,9 @@
 from django.urls import path, re_path
 from . import views
 
-app_name = "projects"
+app_name = "main"
 
 urlpatterns = [
     path("", views.homepage, name="project_list"),
-    path("map/", views.mappage, name="map")
+    path("map/", views.map_page, name="map")
 ]

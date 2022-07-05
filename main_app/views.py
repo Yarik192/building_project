@@ -6,7 +6,6 @@ from main_app.models import Feedback
 
 
 def homepage(request: HttpRequest) -> HttpResponse:
-    print(request.POST)
     if request.method == "POST":
         name = request.POST["name"]
         phone_number = request.POST["phone_number"]
@@ -17,5 +16,5 @@ def homepage(request: HttpRequest) -> HttpResponse:
     return render(request, "main_app/landing.html")
 
 
-def mappage(request: HttpRequest) -> HttpResponse:
+def map_page(request: HttpRequest) -> HttpResponse:
     return render(request, "main_app/map.html")
